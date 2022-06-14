@@ -1,13 +1,42 @@
 package com.funkoapp.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
+import com.funkoapp.data.FunkoappDatabase
+import com.funkoapp.model.Funkoapp
+import com.funkoapp.repository.FunkoappRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class FunkoappViewModel : ViewModel() {
+class FunkoappViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val getAllData: LiveData<List<Funkoapp>>
+
+    //Esta es la menera de como accedo al repositorio desde el view model
+    private val repository : FunkoappRepository
+
+    //Se inicializan los atributos anteriores de esta clase
+    init {
+        val funkoappDao = FunkoappDatabase.getDatabase(application).funkoappDao()
+        repository = FunkoappRepository(funkoappDao)
+        getAllData = repository.getAllData
     }
-    val text: LiveData<String> = _text
+    //Esta funcion de alto nivel llama al subproceso de I/O para grabar un regristro Lugar
+    fun addfunkoapp(funkoapp:Funkoapp){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.addFunkoapp(funkoapp)
+        }
+    }
+    //Esta funcion de alto nivel llama al subproceso de I/O para actualizar un regristro Lugar
+    fun updatefunkoapp(funkoapp:Funkoapp){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateFunkoapp(funkoapp)
+        }
+    }
+    //Esta funcion de alto nivel llama al subproceso de I/O para eliminar un regristro Lugar
+    fun deletefunkoapp(funkoapp:Funkoapp){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteFunkoapp(funkoapp)
+        }
+    }
 }

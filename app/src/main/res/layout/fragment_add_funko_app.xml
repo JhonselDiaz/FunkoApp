@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="ui.funkoapp.AddFunkoAppFragment" >
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_nombre"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/et_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        tools:text="@string/msg_numero" />
+
+    <EditText
+        android:id="@+id/et_sticker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_sticker"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/et_segundaetiqueta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_segundasticker"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/et_fechacompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_fechaComprado"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/et_precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_precio"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/et_tienda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/msg_tienda"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/bt_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:text="@string/bt_agregar" />
+
+</LinearLayout>

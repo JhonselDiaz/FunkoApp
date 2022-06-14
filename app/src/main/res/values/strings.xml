@@ -20,15 +20,19 @@
 
 
     <!-- Datos para el reciclador-->
-    <string name="msg_nombre">Nombre del lugar</string>
-    <string name="msg_correo">Correo (adc@adc.com)</string>
-    <string name="msg_telefono">Telefono (####-####)</string>
-    <string name="msg_web">Sitio Web</string>
+    <string name="msg_nombre">Nombre del Funko</string>
+    <string name="msg_imagen">Imagen</string>
+    <string name="msg_numero">Numero</string>
+    <string name="msg_sticker">Etiqueta</string>
+    <string name="msg_segundasticker">Segunda Etiqueta</string>
+    <string name="msg_fechaComprado">Fecha de Compra</string>
+    <string name="msg_precio">Precio</string>
+    <string name="msg_tienda">Tienda</string>
     <string name="bt_agregar">Agregar</string>
     <string name="bt_actualizar">Actualizar</string>
-    <string name="lugarAdded">LugarAgregado</string>
+    <string name="funkoAdded">Funko Agregado</string>
     <string name="noData">Faltan Datos</string>
-    <string name="LugarModificado">Lugar Modificado</string>
+    <string name="funkoodificado">Funko Modificado</string>
 
     <string name="menu_funkoapp">FunkoApp</string>
 </resources>

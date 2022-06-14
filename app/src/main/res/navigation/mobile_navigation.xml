@@ -9,7 +9,11 @@
         android:id="@+id/nav_funkoapp"
         android:name="com.funkoapp.ui.funkoapp.FunkoappFragment"
         android:label="@string/menu_funkoapp"
-        tools:layout="@layout/fragment_funkoapp" />
+        tools:layout="@layout/fragment_funkoapp" >
+        <action
+            android:id="@+id/action_nav_funkoapp_to_addFunkoAppFragment"
+            app:destination="@id/addFunkoAppFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,13 @@
         android:name="com.funkoapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addFunkoAppFragment"
+        android:name="com.funkoapp.ui.funkoapp.AddFunkoAppFragment"
+        android:label="fragment_add_funko_app"
+        tools:layout="@layout/fragment_add_funko_app" >
+        <action
+            android:id="@+id/action_addFunkoAppFragment_to_nav_funkoapp"
+            app:destination="@id/nav_funkoapp" />
+    </fragment>
 </navigation>
